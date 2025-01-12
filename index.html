@@ -329,15 +329,15 @@
             comments or feedback, please use the form below.
         </p>
 
-        <form action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <form action="https://api.web3forms.com/submit" method="post" class="max-w-2xl mx-auto">
+            <input type="hidden" name="access_key" value="256264a6-0664-4041-9015-9815f6f64721">
             <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
-                <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none
+                <input type="text" placeholder="Enter your name" name="name" class="flex-1 p-3 outline-none
                 border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required>
-                <input type="text" placeholder="Enter your email" class="flex-1 p-3 outline-none
+                <input type="text" placeholder="Enter your email" name="email" class="flex-1 p-3 outline-none
                 border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required>
             </div>
-            <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border
+            <textarea rows="6" placeholder="Enter your message" name="message" class="w-full p-4 outline-none border
              border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required></textarea>
 
 
