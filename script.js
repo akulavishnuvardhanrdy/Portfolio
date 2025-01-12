@@ -24,19 +24,18 @@ window.addEventListener('scroll',()=>{
     }
 })
 
-if(localStorage.theme==='dark' || (!('theme' in localStorage) && 
-    window.matchMedia('(prefers-color-scheme: dark)').matches)){
-        window.document.documentElement.classList.add(dark);
-}else{
-    window.document.documentElement.classList.remove(dark);
+if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
+    window.document.documentElement.classList.add('dark');
+    localStorage.theme = 'dark'; 
+} else {
+    window.document.documentElement.classList.remove('dark');
 }
 
-function toggleTheme(){
-    document.documentElement.classList.toggle('dark')
-    if(document.documentElement.classList.contains('dark')){
+function toggleTheme() {
+    document.documentElement.classList.toggle('dark');
+    if (document.documentElement.classList.contains('dark')) {
         localStorage.theme = 'dark';
-    }
-    else{
-        localStorage.theme = 'light'
+    } else {
+        localStorage.theme = 'light';
     }
 }
