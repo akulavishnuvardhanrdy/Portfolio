@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
 </head>
 
-<body class="overflow-x-hidden font-OutFit leading-8">
+<body class="overflow-x-hidden font-OutFit leading-8 dark:bg-darkTheme dark:text-white">
 
     <!-- Background Gradient in the background of the header -->
-    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <img src="./images/header-bg-color.png" alt="" class="w-full"/>
     </div>
 
@@ -23,10 +23,13 @@
     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
         
         <!-- left Portion -->
-        <img src="./images/logo.png" alt="Logo" class="w-28 cursor-pointer mr-14">
+        <img src="./images/logo.png" alt="Logo" class="w-28 cursor-pointer mr-14 dark:hidden">
+        <img src="./images/logo_dark.png" alt="Logo" class="w-28 cursor-pointer mr-14 hidden dark:block">
         
         <!-- Middle portions in Large Screens -->
-        <ul class="hidden md:flex items-center gap-6 font-Ovo lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul class="hidden md:flex items-center gap-6 font-Ovo lg:gap-8 rounded-full 
+        px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 
+        dark:bg-transparent">
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#services">Services</a></li>
@@ -36,20 +39,31 @@
         
         <!-- Right Portion in Nav bar -->
         <div class="flex items-center gap-4">
-            <button><img src="./images/moon_icon.png" class="w-6"/></button>
-            <a href="#contact" class="hidden lg:flex items-center font-Ovo gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">
-                Contact<img src="./images/arrow-icon.png" class="w-3"/>
+
+            <button onclick="toggleTheme()">
+                <img src="./images/moon_icon.png" class="w-6 dark:hidden"/>
+                <img src="./images/sun_icon.png" class="w-6 hidden dark:block"/>
+            </button>
+            
+            <a href="#contact" class="hidden lg:flex items-center font-Ovo gap-3 
+            px-10 py-2.5 border border-gray-500 rounded-full ml-4 dark:border-white/50">
+                Contact
+                <img src="./images/arrow-icon.png" class="w-3 dark:hidden"/>
+                <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block"/>
             </a>
             <button class="block md:hidden ml-3" onclick="openMenu()">
-                <img src="./images/menu-black.png" alt="" class="w-6"/>
+                <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden"/>
+                <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block"/>
             </button>
         </div>
 
         <!-- Mobile View -->
         <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0
-        bottom-0 w-64 z-50 h-screen bg-rose-50 font-Ovo transition duration-500">
+        bottom-0 w-64 z-50 h-screen bg-rose-50 font-Ovo transition duration-500
+        dark:bg-[#2a004a] dark:text-white">
             <div class="absolute right-6 top-6" onclick="closeMenu()">
-                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer">
+                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+                <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
             </div>
             <li><a href="#top" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About me</a></li>
