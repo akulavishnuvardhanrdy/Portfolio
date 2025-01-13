@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Vishnu</title>
+    <title>Vishnu Vardhan - Portfolio</title>
+    <link rel="icon" href="images/dev-icon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"> </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
 
 <body class="overflow-x-hidden font-OutFit leading-8 dark:bg-darkTheme dark:text-white">
 
-    <!-- Background Gradient in the background of the header -->
+    <!-- Background Gradient Light Mode -->
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <img src="./images/header-bg-color.png" alt="" class="w-full"/>
     </div>
@@ -32,7 +33,7 @@
         dark:bg-transparent">
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#work">My Work</a></li>
             <li><a href="#contact">Contact me</a></li>
         </ul>
@@ -51,6 +52,8 @@
                 <img src="./images/arrow-icon.png" class="w-3 dark:hidden"/>
                 <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block"/>
             </a>
+
+            <!-- Side bar Open menu in Smaller Screens -->
             <button class="block md:hidden ml-3" onclick="openMenu()">
                 <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden"/>
                 <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block"/>
@@ -67,7 +70,7 @@
             </div>
             <li><a href="#top" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About me</a></li>
-            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
             <li><a href="#work" onclick="closeMenu()">My Work</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
         </ul>
@@ -76,17 +79,16 @@
 
 
     <!-- Header -->
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-        <img src="./images/profile-img.png" alt="" class="rounded-full w-32">
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-10">
+        <img src="./images/profile-img.png" alt="" class="rounded-full w-32 h-32">
         <h3 class="flex items-end font-Ovo gap-2 text-xl md:text-2xl mb-3">
             Hi! I'm Vishnu Vardhan <img src="./images/hand-icon.png" alt="" class="w-6">
         </h3>
-        <h1 class="text-3xl font-Ovo sm:text-6xl lg:text-[66px]">
+        <h1 class="text-4xl font-Ovo sm:text-6xl lg:text-[66px]">
             Full Stack Developer
         </h1>
-        <p class="max-w-2xl mx-auto font-Ovo">
-            I am a Full stack Developer from India with the graduation of 4 years completion 
-            fot he sake of this reason i am single
+        <p class="max-w-sm sm:max-w-lg mx-auto font-Ovo text-base sm:text-lg">
+            Focused on creating scalable solutions with Java Spring Boot and MERN stack expertise
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
             <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r 
@@ -112,43 +114,46 @@
                 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0,15)]
                 flex items-center justify-center">
                     <img src="./images/circular-text.png" alt="" class="w-full animate-spin_slow">
-                    <img src="./images/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2
+                    <img src="./images/dev-icon.png" alt="" class="w-1/3 absolute top-1/2 left-1/2
                     -translate-x-1/2 -translate-y-1/2">
 
                 </div>
             </div>
             <div class="flex-1 ">
                 <p class="mb-10 max-w-2xl">
-                    I am an experienced Frontend Developer with over a decade of 
-                    professional expertise in the field. Throughout my career, I 
-                    have had the privilege of collaborating with prestigious 
-                    organizations, contributing to their success and growth.
+                    I’m Vishnu Vardhan, a full-stack developer passionate about creating scalable and 
+                    responsive web applications. I specialize in both frontend and backend development, 
+                    strong understanding in Java Core concepts and DSA problem solving. I’m always eager to learn and explore 
+                    new technologies, striving to deliver efficient and impactful solutions.
                 </p>
 
                 <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
                     <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
                     cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 
                     hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-                        <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
-                        <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, React, Js, Nextjs</p>
+                        <img src="./images/java_logo.png" alt="" class="w-14 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Language</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">
+                            Expert in Java core concepts and proficient in solving DSA
+                        </p>
                     </li>
                     <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
                     cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 
                     hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-                        <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
-                        <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, React, Js, Nextjs</p>
+                        <img src="./images/full-stack-logo.png" alt="" class="w-12 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Full Stack Dev</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">
+                            Skilled in Web Development with MERN and Spring Boot.
+                        </p>
                     </li>
                     <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
                     cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 
                     hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-                        <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
-                        <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, React, Js, Nextjs</p>
+                        <img src="./images/git.png" alt="" class="w-12 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Collaboration</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">
+                            Using Git for version control and seamless team collaboration.
+                        </p>
                     </li>
                 </ul>
 
@@ -159,14 +164,17 @@
                         <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
                     </li>
                     <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/firebase.png" alt="" class="w-5 sm:w-7">
+                        <img src="./images/react-logo.png" alt="" class="w-7 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                        <img src="./images/js-logo.png" alt="" class="w-7 sm:w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                        <img src="./images/spring.png" alt="" class="w-7 sm:w-7">
                     </li>
                     <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
                         <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7">
-                    </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
-                    </li>
+                    </li>                    
                     <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
                         <img src="./images/git.png" alt="" class="w-5 sm:w-7">
                     </li>
@@ -176,62 +184,54 @@
      </div>
 
 
-     <!-- Services -->
-      <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
-        <h4 class="text-center mb-2 text-lg font-Ovo">What I offer</h4>
-        <h2 class="text-center text-5xl font-Ovo">My Services</h2>
-        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-            am an experienced Frontend Developer with over a decade of professional expertise in the field
+     <!-- Skills -->
+      <div id="skills" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg font-Ovo">What I know</h4>
+        <h2 class="text-center text-5xl font-Ovo">My Skills</h2>
+        <p class="text-center max-w-xl mx-auto mt-5 mb-12 font-Ovo">
+            These are the skills I possess and regularly use to build efficient and innovative full-stack web applications    
         </p>
 
         <div class="grid grid-cols-auto gap-6 my-10">
             <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
             cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
             dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/web-icon.png" alt="" class="w-10">
-                <h3 class="text-lg my-4 text-gray-700  dark:text-white">Web Design</h3>
-                <p class="text-sm text-gray-600 leading-5  dark:text-white/80">Web development is the process
-                    of building programming..
+                <img src="./images/frontend-logo.png" alt="" class="w-12 rounded-xl">
+                <h3 class="text-lg my-4 text-gray-700  dark:text-white">Front End</h3>
+                <p class="text-sm text-gray-600 leading-5  dark:text-white/80">
+                    HTML, CSS, JavaScript, React, Bootstrap, Tailwind CSS
                 </p>
-                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more
-                    <img src="./images/right-arrow.png" alt="" class="w-4">
-                </a>
+                
             </div>
             <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
             cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
             dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/mobile-icon.png" alt="" class="w-10">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Mobile app</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process
-                    of building programming..
+                <img src="./images/springboot-logo.png" alt="" class="w-12 rounded-xl">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Back End</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+                    Node.js (MERN) <br>
+                    Spring Boot (Java)
                 </p>
-                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more
-                    <img src="./images/right-arrow.png" alt="" class="w-4">
-                </a>
             </div>
             <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
             cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
             dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/graphics-icon.png" alt="" class="w-10">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">UI/UX design</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process
-                    of building programming..
+                <img src="./images/database-logo.png" alt="" class="w-12 rounded-xl">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Databases</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+                    Relational: MySQL<br>
+                    NoSQL: MongoDB<br><br>
                 </p>
-                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more
-                    <img src="./images/right-arrow.png" alt="" class="w-4">
-                </a>
             </div>
             <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
             cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
             dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/web-icon.png" alt="" class="w-10">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Graphics Design</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process
-                    of building programming..
+                <img src="./images/postman-logo.png" alt="" class="w-12 rounded-xl">
+                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Development Tools</h3>
+                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+                    Postman, REST APIs, etc.<br>
+                    Git, Github
                 </p>
-                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more
-                    <img src="./images/right-arrow.png" alt="" class="w-4">
-                </a>
             </div>
         </div>
       </div>
