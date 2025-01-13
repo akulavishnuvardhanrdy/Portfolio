@@ -70,6 +70,31 @@ const pacerProjectIntro = {
     imageSrc: "./images/pacer-logo.png"
   };
   
+const vsrBookingProjectIntro = {
+    subHeading: "Booking System",
+    title: "VSR Booking",
+    description: "The VSR Booking System allows users to book buses, trains, airplanes, and hotels, providing a seamless experience for travelers.",
+    technologies: [
+      "./images/js-logo.png",
+      "./images/react-logo.png",
+      "./images/bootstrap.png",
+      "./images/git.png",
+      "./images/mongodb.png"
+    ],
+    keyFeatures: [
+        "Book buses, trains, airplanes, and hotels in one platform.",
+        "User-friendly interface for browsing and booking transportation options.",
+        "Option to print receipts for successful bookings.",
+        "Form validation for secure and error-free user inputs.",
+        "Responsive design for smooth experience across devices.",
+        "Easy navigation with intuitive user interface.",
+        "Advanced error handling and user-friendly error messages."
+    ],     
+    gitLink: "https://github.com/AkulaVishnuVardhanReddy/PACER-Frontend",
+    demoLink: "https://vsr-booking.onrender.com/",
+    imageSrc: "./images/vsr-logo.jpg"
+};
+
   
   // Event listener to open the modal with the PACER project content
   pacerDiv.addEventListener("click", () => {
@@ -93,4 +118,26 @@ const pacerProjectIntro = {
     // Update the links
     document.getElementById("gitLink").href = pacerProjectIntro.gitLink;
     document.getElementById("demoLink").href = pacerProjectIntro.demoLink;
+  });
+
+  vsrDiv.addEventListener("click", () => {
+    
+    project.classList.remove("hidden");
+    document.getElementById("projectImage").src = vsrBookingProjectIntro.imageSrc;
+    document.getElementById("subHeading").innerHTML = vsrBookingProjectIntro.subHeading;
+    document.getElementById("projectTitle").innerText = vsrBookingProjectIntro.title;
+    document.getElementById("projectDescription").innerText = vsrBookingProjectIntro.description;
+  
+    technologies.innerHTML = vsrBookingProjectIntro.technologies.map(tech => {
+        return `<li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                    <img src=${tech} alt="${tech}" class="w-9 sm:w-7">
+                </li>`;
+    }).join('');
+
+    const featuresList = document.getElementById("featuresList");
+    featuresList.innerHTML = vsrBookingProjectIntro.keyFeatures.map(feature => "-> "+`${feature}`).join("<br>");
+  
+    // Update the links
+    document.getElementById("gitLink").href = vsrBookingProjectIntro.gitLink;
+    document.getElementById("demoLink").href = vsrBookingProjectIntro.demoLink;
   });
