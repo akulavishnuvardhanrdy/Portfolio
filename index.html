@@ -10,6 +10,7 @@
     <script src="./tailwind.config.js"> </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
 </head>
 
@@ -246,9 +247,9 @@
             my skills in full-stack development and problem-solving.
         </p>
         <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
-            
+            <a href="#specific-project">
             <div class="aspect-square bg-[url('./images/pacer-logo.png')] bg-no-repeat bg-cover 
-            bg-center rounded-lg relative cursor-pointer group">
+            bg-center rounded-lg relative cursor-pointer group" id="pacerDiv">
                 <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2
                 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
                     <div>
@@ -261,6 +262,7 @@
                     </div>
                 </div>
             </div>
+            </a>
 
             <div class="aspect-square bg-[url('./images/vsr-logo.jpg')] bg-no-repeat bg-cover 
             bg-center rounded-lg relative cursor-pointer group">
@@ -309,13 +311,49 @@
 
             
         </div>
-        <a href="#" class="w-max flex items-center justify-cneter gap-2 text-gray-700 
-        border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 
-        hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-[#2a004a]">
-            Show more
-            <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
-            <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
-        </a>
+      </div>
+
+      <div id="specific-project" class="hidden px-[12%] py-10 scroll-mt-20 mb-10">
+        <h4 id="subHeading" class="text-center mb-2 text-lg font-Ovo"></h4>
+        <h2 id="projectTitle" class="text-center text-5xl font-Ovo"></h2>
+        <p id="projectDescription" class="text-center max-w-xl mx-auto mt-5 mb-8 font-Ovo"></p>
+
+        <div class="flex flex-col md:flex-row gap-6 items-center justify-around">
+            <div class="flex flex-col items-center justify-center">
+                <img id="projectImage" class="w-80 rounded-lg shadow-md" alt="Project Image">
+                <div class="flex gap-4 mt-6">
+                    <a id="gitLink" href="#" class="w-max gap-2 text-gray-700 flex items-center justify-center 
+                            border-[0.5px] border-gray-700 rounded-full py-2 px-10 mx-auto my-4 
+                            hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-[#2a004a]">
+                    Git Repo       
+                    <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+                    <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">     
+                    </a>
+                    <a id="demoLink" href="#" class="w-max gap-2 text-gray-700  flex items-center justify-center
+                            border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-4 
+                            hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-[#2a004a]">
+                    Demo  
+                    <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+                    <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">     
+                    </a>
+                    </div>
+            </div>
+            <div>
+                <div>
+                    <h3 class="text-xl font-semibold mt-6 font-OutFit">Key Features</h3>
+                    <p id="featuresList" class="list-disc pl-5 font-OutFit text-gray-600 dark:text-gray-300"></p>
+                  </div>
+              <div>
+                <h3 class="text-xl font-semibold mt-6 font-OutFit">Technologies used</h3>
+                
+                <ul id="technologies" class="mt-3 flex items-center gap-3 sm:gap-5"></ul>
+            </div>
+      
+              
+      
+              
+            </div>
+        </div>
       </div>
 
     <!-- Education -->
