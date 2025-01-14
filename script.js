@@ -185,11 +185,11 @@ document.getElementById("vsrDiv").addEventListener("click", () => {
   loadProjectContent("VSR");
 });
 
-document.getElementById("hotel-taj").addEventListener("click", () => {
+document.getElementById("hotelTaj").addEventListener("click", () => {
     loadProjectContent("TajHotel");
 });
 
-document.getElementById("elections-results").addEventListener("click", () => {
+document.getElementById("electionsResults").addEventListener("click", () => {
     loadProjectContent("ElectionResults");
 });
 
