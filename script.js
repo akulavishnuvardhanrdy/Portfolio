@@ -27,7 +27,7 @@ const projectData = {
       "Case adjournment and hearing schedule management.",
       "Secure document upload and storage for case files.",
     ],
-    gitLink: "https://github.com/your-repo-link",
+    gitLink: "https://github.com/AkulaVishnuVardhanReddy/PACER-Frontend",
     demoLink: "https://your-live-demo-link.com",
     imageSrc: "./images/pacer-logo.png",
   },
@@ -54,6 +54,47 @@ const projectData = {
     gitLink: "https://github.com/AkulaVishnuVardhanReddy/PACER-Frontend",
     demoLink: "https://vsr-booking.onrender.com/",
     imageSrc: "./images/vsr-logo.jpg",
+  },
+  TajHotel: {
+    subHeading: "Responsive",
+    title: "Hotel Taj",
+    description: "Hotel Taj website is a static, responsive project, offering an attractive and user-friendly interface.",
+    technologies: [
+      "./images/html-logo.png",
+      "./images/css-logo.png",
+    ],
+    keyFeatures: [
+        "Fully responsive design for seamless viewing across all devices.",
+        "Attractive user interface showcasing hotel facilities and features.",
+        "Built using modern HTML and CSS with media queries for responsiveness.",
+        "Includes a custom favicon for a polished and professional look.",
+        "Efficient and clean code structure for faster loading times.",
+        "Dynamic layouts that adjust to different screen sizes using media queries.",
+        "Easy navigation with clear and concise content presentation.",
+    ],  
+    gitLink: "https://github.com/AkulaVishnuVardhanReddy/Hotel-Taj",
+    demoLink: "https://hotel-taj.onrender.com/",
+    imageSrc: "./images/taj-logo.jpg",
+  },
+  ElectionResults: {
+    subHeading: "Checking",
+    title: "Election Results",
+    description: "The Election Results project is a web application that displays election results with an interactive table",
+    technologies: [
+      "./images/html-logo.png",
+      "./images/css-logo.png"
+    ],
+    keyFeatures: [
+        "Interactive table displaying election results.",
+        "Sidebar navigation for easy access to different sections.",
+        "Custom favicon for a professional look and branding.",
+        "Attractive background images to enhance the visual appeal of the platform.",
+        "Intuitive UI/UX for users to browse and analyze election data effortlessly.",
+        "Efficient code structure to ensure fast loading and smooth performance.",
+    ],  
+    gitLink: "https://github.com/AkulaVishnuVardhanReddy/Elections",
+    demoLink: "https://electionsresults.onrender.com/",
+    imageSrc: "./images/elections-logo.webp",
   },
 };
 
@@ -142,6 +183,14 @@ document.getElementById("pacerDiv").addEventListener("click", () => {
 
 document.getElementById("vsrDiv").addEventListener("click", () => {
   loadProjectContent("VSR");
+});
+
+document.getElementById("hotel-taj").addEventListener("click", () => {
+    loadProjectContent("TajHotel");
+});
+
+document.getElementById("elections-results").addEventListener("click", () => {
+    loadProjectContent("ElectionResults");
 });
 
 window.addEventListener("scroll", handleScroll);
