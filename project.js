@@ -1,4 +1,5 @@
 // Project content objects
+const project = document.getElementById("specific-project");
 const projectData = {
     PACER: {
       subHeading: "JIS",

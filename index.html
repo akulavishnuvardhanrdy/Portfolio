@@ -21,224 +21,131 @@
         <img src="./images/header-bg-color.png" alt="" class="w-full"/>
     </div>
 
-    <!-- Navigation bar -->
+    <!-- Navigation Bar -->
     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
-        
-        <!-- left Portion -->
-        <img src="./images/logo.png" alt="Logo" class="w-28 cursor-pointer mr-14 dark:hidden">
-        <img src="./images/logo_dark.png" alt="Logo" class="w-28 cursor-pointer mr-14 hidden dark:block">
-        
-        <!-- Middle portions in Large Screens -->
-        <ul class="hidden md:flex items-center gap-6 font-Ovo lg:gap-8 rounded-full 
-        px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 
-        dark:bg-transparent">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">My Work</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#services">Services</a></li>
+        <!-- Left Portion -->
+        <img id="lightLogo" src="./images/logo.png" alt="Logo" class="w-28 cursor-pointer mr-14 dark:hidden">
+        <img id="darkLogo" src="./images/logo_dark.png" alt="Logo" class="w-28 cursor-pointer mr-14 hidden dark:block">
+    
+        <!-- Middle Portion for Large Screens -->
+        <ul id="navLinks" class="hidden md:flex items-center gap-6 font-Ovo lg:gap-8 rounded-full 
+        px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent">
         </ul>
-        
-        <!-- Right Portion in Nav bar -->
+    
+        <!-- Right Portion -->
         <div class="flex items-center gap-4">
-
-            <button onclick="toggleTheme()">
-                <img src="./images/moon_icon.png" class="w-6 dark:hidden"/>
-                <img src="./images/sun_icon.png" class="w-6 hidden dark:block"/>
-            </button>
-            
-            <a href="#contact" class="hidden lg:flex items-center font-Ovo gap-3 
-            px-10 py-2.5 border border-gray-500 rounded-full ml-4 dark:border-white/50">
-                Contact
-                <img src="./images/arrow-icon.png" class="w-3 dark:hidden"/>
-                <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block"/>
-            </a>
-
-            <!-- Side bar Open menu in Smaller Screens -->
-            <button class="block md:hidden ml-3" onclick="openMenu()">
-                <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden"/>
-                <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block"/>
-            </button>
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle">
+            <img id="lightThemeIcon" src="./images/moon_icon.png" class="w-6 dark:hidden">
+            <img id="darkThemeIcon" src="./images/sun_icon.png" class="w-6 hidden dark:block">
+        </button>
+    
+        <!-- Contact Button for Large Screens -->
+        <a href="#contact" class="hidden lg:flex items-center font-Ovo gap-3 px-10 py-2.5 border 
+            border-gray-500 rounded-full ml-4 dark:border-white/50">
+            Contact
+            <img id="lightArrow" src="./images/arrow-icon.png" class="w-3 dark:hidden">
+            <img id="darkArrow" src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block">
+        </a>
+    
+        <!-- Menu Button for Small Screens -->
+        <button class="block md:hidden ml-3" id="menuOpen">
+            <img id="lightMenuIcon" src="./images/menu-black.png" class="w-6 dark:hidden">
+            <img id="darkMenuIcon" src="./images/menu-white.png" class="w-6 hidden dark:block">
+        </button>
         </div>
-
+    
         <!-- Mobile View -->
-        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0
-        bottom-0 w-64 z-50 h-screen bg-rose-50 font-Ovo transition duration-500
-        dark:bg-[#2a004a] dark:text-white">
-            <div class="absolute right-6 top-6" onclick="closeMenu()">
-                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
-                <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
-            </div>
-            <li><a href="#top" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">About me</a></li>
-            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
-            <li><a href="#education" onclick="closeMenu()">Education</a></li>
-            <li><a href="#services" onclick="closeMenu()">Services</a></li>
-            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 
+        w-64 z-50 h-screen bg-rose-50 font-Ovo transition duration-500 dark:bg-[#2a004a] dark:text-white">
+        <div class="absolute right-6 top-6" id="menuClose">
+            <img id="lightCloseIcon" src="./images/close-black.png" class="w-5 cursor-pointer dark:hidden">
+            <img id="darkCloseIcon" src="./images/close-white.png" class="w-5 cursor-pointer hidden dark:block">
+        </div>
         </ul>
-
     </nav>
+  
 
-
-    <!-- Header -->
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-10">
-        <img src="./images/profile-img.png" alt="" class="rounded-full w-32 h-32">
+    <!-- Hero Section -->
+    <div class="w-11/12 max-w-3xl mx-auto h-screen flex flex-col items-center justify-center text-center gap-4 pt-10">
+        <!-- Profile Image -->
+        <img src="./images/profile-img.png" alt="Profile" class="rounded-full w-32 h-32">
+    
+        <!-- Introduction -->
         <h3 class="flex items-end font-Ovo gap-2 text-xl md:text-2xl mb-3">
-            Hi! I'm Vishnu Vardhan <img src="./images/hand-icon.png" alt="" class="w-6">
+        Hi! I'm Vishnu Vardhan <img src="./images/hand-icon.png" alt="Hand Icon" class="w-6">
         </h3>
+        
+        <!-- Title -->
         <h1 class="text-4xl font-Ovo sm:text-6xl lg:text-[66px]">
-            Full Stack Developer
+        Full Stack Developer
         </h1>
-        <p class="max-w-sm sm:max-w-lg mx-auto font-Ovo text-base sm:text-lg">
-            Focused on creating scalable solutions with Java Spring Boot and MERN stack expertise
+    
+        <!-- Description -->
+        <p class="max-w-lg mx-auto font-Ovo text-base sm:text-lg">
+        Focused on creating scalable solutions with Java Spring Boot and MERN stack expertise
         </p>
+    
+        <!-- Buttons -->
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-            <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r 
-            from-[#b820e6]  to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
-                Contact me <img src="./images/right-arrow-white.png" class="w-4"/>
-            </a>
-            <a href="./My_Resume.pdf" download class="px-10 py-3 border rounded-full border-gray-500 
-            bg-white flex items-center gap-2 dark:text-black">
-                My Resume <img src="./images/download-icon.png" class="w-4"/>
-            </a>
+        <a 
+            href="#contact" 
+            class="px-10 py-3 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 hover:shadow-lg transition duration-300"
+        >
+            Contact me 
+            <img src="./images/right-arrow-white.png" alt="Right Arrow" class="w-4">
+        </a>
+        <a 
+            href="./My_Resume.pdf" 
+            download 
+            class="px-10 py-3 rounded-full border border-gray-500 bg-white text-black flex items-center gap-2 hover:shadow-lg transition duration-300"
+        >
+            My Resume 
+            <img src="./images/download-icon.png" alt="Download Icon" class="w-4">
+        </a>
         </div>
     </div>
+  
 
     <!-- About Me -->
-     <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
         <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
         <h2 class="text-center text-5xl font-Ovo">About me</h2>
         <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-            <div class="max-w-max mx-auto relative">
-                <img src="./images/user-image.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
-                
-                <div class="bg-white w-1/2 aspect-square aspect-square absolute right-0 bottom-0
-                rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0,15)]
-                flex items-center justify-center">
-                    <img src="./images/circular-text.png" alt="" class="w-full animate-spin_slow">
-                    <img src="./images/dev-icon.png" alt="" class="w-1/3 absolute top-1/2 left-1/2
-                    -translate-x-1/2 -translate-y-1/2">
-
-                </div>
-            </div>
-            <div class="flex-1 ">
-                <p class="mb-10 max-w-2xl">
-                    I’m Vishnu Vardhan, a full-stack developer passionate about creating scalable and 
-                    responsive web applications. I specialize in both frontend and backend development, 
-                    strong understanding in Java Core concepts and DSA problem solving. I’m always eager to learn and explore 
-                    new technologies, striving to deliver efficient and impactful solutions.
-                </p>
-
-                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
-                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
-                    cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 
-                    hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-                        <img src="./images/java_logo.png" alt="" class="w-14 mt-3">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Language</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">
-                            Expert in Java core concepts and proficient in solving DSA
-                        </p>
-                    </li>
-                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
-                    cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 
-                    hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-                        <img src="./images/full-stack-logo.png" alt="" class="w-12 mt-3">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Full Stack Dev</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">
-                            Skilled in Web Development with MERN and Spring Boot.
-                        </p>
-                    </li>
-                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 
-                    cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 
-                    hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
-                        <img src="./images/git.png" alt="" class="w-12 mt-3">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Collaboration</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">
-                            Using Git for version control and seamless team collaboration.
-                        </p>
-                    </li>
-                </ul>
-
-
-                <h4 class="my-6 text-gray-700 dark:text-white/80">Tools I use:</h4>
-                <ul class="flex items-center gap-3 sm:gap-5">
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
-                    </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/react-logo.png" alt="" class="w-7 sm:w-7">
-                    </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/js-logo.png" alt="" class="w-7 sm:w-7">
-                    </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/spring.png" alt="" class="w-7 sm:w-7">
-                    </li>
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7">
-                    </li>                    
-                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                        <img src="./images/git.png" alt="" class="w-5 sm:w-7">
-                    </li>
-                </ul>
+        <div class="max-w-max mx-auto relative">
+            <img src="./images/user-image.png" alt="User Image" class="w-64 sm:w-80 rounded-3xl max-w-none">
+            <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0
+                        rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0,15)]
+                        flex items-center justify-center">
+            <img src="./images/circular-text.png" alt="Circular Text" class="w-full animate-spin_slow">
+            <img src="./images/dev-icon.png" alt="Dev Icon" class="w-1/3 absolute top-1/2 left-1/2
+                        -translate-x-1/2 -translate-y-1/2">
             </div>
         </div>
-     </div>
-
-
-     <!-- Skills -->
-      <div id="skills" class="w-full px-[12%] py-10 scroll-mt-20">
+        <div class="flex-1">
+            <p class="mb-10 max-w-2xl" id="about-description">
+            <!-- About Description Will Be Injected Here -->
+            </p>
+            <ul id="about-cards" class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
+            <!-- About Cards Will Be Injected Here -->
+            </ul>
+            <h4 class="my-6 text-gray-700 dark:text-white/80">Tools I use:</h4>
+            <ul id="tools-list" class="flex items-center gap-3 sm:gap-5">
+            <!-- Tools Will Be Injected Here -->
+            </ul>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Skills Section -->
+    <div id="skills" class="w-full px-[12%] py-10 scroll-mt-20">
         <h4 class="text-center mb-2 text-lg font-Ovo">What I know</h4>
         <h2 class="text-center text-5xl font-Ovo">My Skills</h2>
         <p class="text-center max-w-xl mx-auto mt-5 mb-12 font-Ovo">
-            These are the skills I possess and regularly use to build efficient and innovative full-stack web applications    
+        These are the skills I possess and regularly use to build efficient and innovative full-stack web applications
         </p>
-
-        <div class="grid grid-cols-auto gap-6 my-10">
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/frontend-logo.png" alt="" class="w-12 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700  dark:text-white">Front End</h3>
-                <p class="text-sm text-gray-600 leading-5  dark:text-white/80">
-                    HTML, CSS, JavaScript, React, Bootstrap, Tailwind CSS
-                </p>
-                
-            </div>
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/springboot-logo.png" alt="" class="w-12 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Back End</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
-                    Node.js (MERN) <br>
-                    Spring Boot (Java)
-                </p>
-            </div>
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/database-logo.png" alt="" class="w-12 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Databases</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
-                    Relational: MySQL<br>
-                    NoSQL: MongoDB<br><br>
-                </p>
-            </div>
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/postman-logo.png" alt="" class="w-12 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Development Tools</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
-                    Postman, REST APIs, etc.<br>
-                    Git, Github
-                </p>
-            </div>
-        </div>
-      </div>
+        <div id="skills-container" class="grid grid-cols-auto gap-6 my-10"></div>
+    </div>
 
     <!-- My work -->
     <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
@@ -294,49 +201,22 @@
         </div>
     </div>
   
-    <!-- Education -->
-      <div id="education" class="w-full px-[12%] py-10 scroll-mt-20">
+    <!-- Education Section -->
+    <div id="education" class="w-full px-[12%] py-10 scroll-mt-20">
         <h4 class="text-center mb-2 text-lg font-Ovo">Where I Learned</h4>
         <h2 class="text-center text-4xl font-Ovo">Educational Qualifications</h2>
-    
-        <div class="grid grid-cols-auto gap-6 my-10">
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/rgukt_logo.png" alt="" class="w-12 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700  dark:text-white">B.Tech in Computer Science</h3>
-                <p class="text-sm text-gray-600 leading-5  dark:text-white/80">
-                    I am studying B.Tech in CSE at 
-                    RGUKT RK Valley, expected to graduate in 2026.<br><br>
-                    CGPA: 9.14
-                </p>
-                
-            </div>
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/rgukt_logo.png" alt="" class="w-12 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">Pre-University Course (PUC)</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
-                    Completed my PUC at RGUKT RK Valley in 2022, focusing on the 
-                    basics of programming.<br><br>
-                    CGPA: 9.81
-                </p>
-            </div>
-            
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black 
-            cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
-            dark:hover:bg-darkHover dark:hover:shadow-white">
-                <img src="./images/school_logo.png" alt="" class="w-14 rounded-xl">
-                <h3 class="text-lg my-4 text-gray-700 dark:text-white">10th Class</h3>
-                <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
-                    Completed my 10th class at Keshava Reddy School in 2020, laying 
-                    the foundation for my academic journey<br><br>
-                    Marks: 595 / 600
-                </p>
-            </div>
-        </div>
-      </div>
+        <div id="education-container" class="grid grid-cols-auto gap-6 my-10"></div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg font-Ovo">What I know</h4>
+        <h2 class="text-center text-5xl font-Ovo">My Services</h2>
+        <p class="text-center max-w-xl mx-auto mt-5 mb-12 font-Ovo">
+        These are the skills I possess and regularly use to build efficient and innovative full-stack web applications
+        </p>
+        <div id="skills-container" class="grid grid-cols-auto gap-6 my-10"></div>
+    </div>
 
 
 
@@ -369,6 +249,9 @@
             </button>
         </form>
       </div>
+    <script src="./navBar.js"></script>
+    <script src="./aboutMe.js"></script>
+    <script src="./skills.js"></script>
     <script src="./work.js"></script>
     <script src="./project.js"></script>
     <script src="./script.js"></script>
