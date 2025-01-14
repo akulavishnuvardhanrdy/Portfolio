@@ -1,50 +1,12 @@
-const sideMenu = document.querySelector('#sideMenu');
-const navBar = document.querySelector('nav');
-const navLink = document.querySelector('nav ul');
+// Selectors
+const sideMenu = document.querySelector("#sideMenu");
+const navBar = document.querySelector("nav");
+const navLink = document.querySelector("nav ul");
+const project = document.getElementById("specific-project");
 
-function openMenu(){
-    sideMenu.style.transform = 'translateX(-16rem)';
-}
-
-function closeMenu(){
-    sideMenu.style.transform = 'translateX(16rem)';
-}
-
-window.addEventListener('scroll',()=>{
-    if(scrollY>50){
-        navBar.classList.add('bg-white','bg-opacity-50','backdrop-blur-lg','shasow-sm'
-            ,'dark:bg-darkTheme', 'dark:shadow-white/20');
-        navLink.classList.remove('bg-white','shadow-sm','bg-opacity-50'
-            ,'dark:border', 'dark:border-white/50', 'dark:bg-transparent');
-    }else{
-        navBar.classList.remove('bg-white','bg-opacity-50','backdrop-blur-lg','shasow-sm'
-            ,'dark:bg-darkTheme', 'dark:shadow-white/20');
-        navLink.classList.add('bg-white','shadow-sm','bg-opacity-50'
-            ,'dark:border', 'dark:border-white/50', 'dark:bg-transparent');
-    }
-})
-
-if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
-    window.document.documentElement.classList.add('dark');
-    localStorage.theme = 'dark'; 
-} else {
-    window.document.documentElement.classList.remove('dark');
-}
-
-function toggleTheme() {
-    document.documentElement.classList.toggle('dark');
-    if (document.documentElement.classList.contains('dark')) {
-        localStorage.theme = 'dark';
-    } else {
-        localStorage.theme = 'light';
-    }
-}
-
-
-const project = document.getElementById('specific-project');
-const pacerDiv = document.getElementById('pacerDiv');
-// PACER project content object
-const pacerProjectIntro = {
+// Project content objects
+const projectData = {
+  PACER: {
     subHeading: "JIS",
     title: "PACER",
     description: "PACER is a Judiciary Information System that improves case management and accessibility for lawyers, judges, and registrars.",
@@ -53,24 +15,23 @@ const pacerProjectIntro = {
       "./images/react-logo.png",
       "./images/spring.png",
       "./images/tailwind.png",
-      "./images/git.png"
+      "./images/git.png",
     ],
     keyFeatures: [
-        "Manage court case details and status updates.",
-        "Lawyers access past cases after payment.",
-        "Role-based dashboards for judges, lawyers, and registrars.",
-        "Account management with user registration and photo uploads.",
-        "Real-time updates on case progress and hearing dates.",
-        "Search functionality for lawyers to find relevant cases.",
-        "Case adjournment and hearing schedule management.",
-        "Secure document upload and storage for case files."
-    ],    
+      "Manage court case details and status updates.",
+      "Lawyers access past cases after payment.",
+      "Role-based dashboards for judges, lawyers, and registrars.",
+      "Account management with user registration and photo uploads.",
+      "Real-time updates on case progress and hearing dates.",
+      "Search functionality for lawyers to find relevant cases.",
+      "Case adjournment and hearing schedule management.",
+      "Secure document upload and storage for case files.",
+    ],
     gitLink: "https://github.com/your-repo-link",
     demoLink: "https://your-live-demo-link.com",
-    imageSrc: "./images/pacer-logo.png"
-  };
-  
-const vsrBookingProjectIntro = {
+    imageSrc: "./images/pacer-logo.png",
+  },
+  VSR: {
     subHeading: "Booking System",
     title: "VSR Booking",
     description: "The VSR Booking System allows users to book buses, trains, airplanes, and hotels, providing a seamless experience for travelers.",
@@ -79,65 +40,125 @@ const vsrBookingProjectIntro = {
       "./images/react-logo.png",
       "./images/bootstrap.png",
       "./images/git.png",
-      "./images/mongodb.png"
+      "./images/mongodb.png",
     ],
     keyFeatures: [
-        "Book buses, trains, airplanes, and hotels in one platform.",
-        "User-friendly interface for browsing and booking transportation options.",
-        "Option to print receipts for successful bookings.",
-        "Form validation for secure and error-free user inputs.",
-        "Responsive design for smooth experience across devices.",
-        "Easy navigation with intuitive user interface.",
-        "Advanced error handling and user-friendly error messages."
-    ],     
+      "Book buses, trains, airplanes, and hotels in one platform.",
+      "User-friendly interface for browsing and booking transportation options.",
+      "Option to print receipts for successful bookings.",
+      "Form validation for secure and error-free user inputs.",
+      "Responsive design for smooth experience across devices.",
+      "Easy navigation with intuitive user interface.",
+      "Advanced error handling and user-friendly error messages.",
+    ],
     gitLink: "https://github.com/AkulaVishnuVardhanReddy/PACER-Frontend",
     demoLink: "https://vsr-booking.onrender.com/",
-    imageSrc: "./images/vsr-logo.jpg"
+    imageSrc: "./images/vsr-logo.jpg",
+  },
 };
 
-  
-  // Event listener to open the modal with the PACER project content
-  pacerDiv.addEventListener("click", () => {
-    
-    project.classList.remove("hidden");
-    // Add dynamic content from pacerProjectIntro object
-    document.getElementById("projectImage").src = pacerProjectIntro.imageSrc;
-    document.getElementById("subHeading").innerHTML = pacerProjectIntro.subHeading;
-    document.getElementById("projectTitle").innerText = pacerProjectIntro.title;
-    document.getElementById("projectDescription").innerText = pacerProjectIntro.description;
-  
-    technologies.innerHTML = pacerProjectIntro.technologies.map(tech => {
-        return `<li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                    <img src=${tech} alt="${tech}" class="w-9 sm:w-7">
-                </li>`;
-    }).join('');
+// Functions
+function toggleMenu(transformValue) {
+  sideMenu.style.transform = `translateX(${transformValue})`;
+}
 
-    const featuresList = document.getElementById("featuresList");
-    featuresList.innerHTML = pacerProjectIntro.keyFeatures.map(feature => "-> "+`${feature}`).join("<br>");
-  
-    // Update the links
-    document.getElementById("gitLink").href = pacerProjectIntro.gitLink;
-    document.getElementById("demoLink").href = pacerProjectIntro.demoLink;
-  });
+function handleScroll() {
+  if (scrollY > 50) {
+    navBar.classList.add(
+      "bg-white",
+      "bg-opacity-50",
+      "backdrop-blur-lg",
+      "shadow-sm",
+      "dark:bg-darkTheme",
+      "dark:shadow-white/20"
+    );
+    navLink.classList.remove(
+      "bg-white",
+      "shadow-sm",
+      "bg-opacity-50",
+      "dark:border",
+      "dark:border-white/50",
+      "dark:bg-transparent"
+    );
+  } else {
+    navBar.classList.remove(
+      "bg-white",
+      "bg-opacity-50",
+      "backdrop-blur-lg",
+      "shadow-sm",
+      "dark:bg-darkTheme",
+      "dark:shadow-white/20"
+    );
+    navLink.classList.add(
+      "bg-white",
+      "shadow-sm",
+      "bg-opacity-50",
+      "dark:border",
+      "dark:border-white/50",
+      "dark:bg-transparent"
+    );
+  }
+}
 
-  vsrDiv.addEventListener("click", () => {
-    
-    project.classList.remove("hidden");
-    document.getElementById("projectImage").src = vsrBookingProjectIntro.imageSrc;
-    document.getElementById("subHeading").innerHTML = vsrBookingProjectIntro.subHeading;
-    document.getElementById("projectTitle").innerText = vsrBookingProjectIntro.title;
-    document.getElementById("projectDescription").innerText = vsrBookingProjectIntro.description;
-  
-    technologies.innerHTML = vsrBookingProjectIntro.technologies.map(tech => {
-        return `<li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
-                    <img src=${tech} alt="${tech}" class="w-9 sm:w-7">
-                </li>`;
-    }).join('');
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+  localStorage.theme = document.documentElement.classList.contains("dark")
+    ? "dark"
+    : "light";
+}
 
-    const featuresList = document.getElementById("featuresList");
-    featuresList.innerHTML = vsrBookingProjectIntro.keyFeatures.map(feature => "-> "+`${feature}`).join("<br>");
-  
-    // Update the links
-    document.getElementById("gitLink").href = vsrBookingProjectIntro.gitLink;
-    document.getElementById("demoLink").href = vsrBookingProjectIntro.demoLink;
-  });
+function loadProjectContent(projectKey) {
+  const data = projectData[projectKey];
+
+  project.classList.remove("hidden");
+  document.getElementById("projectImage").src = data.imageSrc;
+  document.getElementById("subHeading").innerHTML = data.subHeading;
+  document.getElementById("projectTitle").innerText = data.title;
+  document.getElementById("projectDescription").innerText = data.description;
+
+  const technologies = document.getElementById("technologies");
+  technologies.innerHTML = data.technologies
+    .map(
+      (tech) => `
+        <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+          <img src=${tech} alt="${tech}" class="w-9 sm:w-7">
+        </li>`
+    )
+    .join("");
+
+  const featuresList = document.getElementById("featuresList");
+  featuresList.innerHTML = data.keyFeatures
+    .map((feature) => `-> ${feature}`)
+    .join("<br>");
+
+  document.getElementById("gitLink").href = data.gitLink;
+  document.getElementById("demoLink").href = data.demoLink;
+}
+
+// Event Listeners
+document.getElementById("pacerDiv").addEventListener("click", () => {
+  loadProjectContent("PACER");
+});
+
+document.getElementById("vsrDiv").addEventListener("click", () => {
+  loadProjectContent("VSR");
+});
+
+window.addEventListener("scroll", handleScroll);
+
+// Initialize theme
+if (localStorage.theme === "dark" || !("theme" in localStorage)) {
+  document.documentElement.classList.add("dark");
+  localStorage.theme = "dark";
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+// Menu controls
+function openMenu() {
+  toggleMenu("-16rem");
+}
+
+function closeMenu() {
+  toggleMenu("16rem");
+}
