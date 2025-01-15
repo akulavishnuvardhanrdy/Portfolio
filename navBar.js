@@ -24,6 +24,8 @@ const navItems = [
     sideMenu.innerHTML += `<li><a href="${item.href}" onclick="closeMenu()">${item.name}</a></li>`;
   });
 
+  sideMenu.innerHTML += `<li><a href="#contact" onclick="closeMenu()">Contact me</a></li>`;
+
   
   
   

@@ -1,13 +1,13 @@
 const services = [
     {
+      title: "PC Club Executive",
+      description: "Effectively managed teams and delegated tasks.",
+      bgImage: "./images/pcClub.jpg",
+    },
+    {
       title: "NSS Volunteer",
       description: "Organized events to promote social responsibility.",
       bgImage: "./images/nss.jpg",
-    },
-    {
-      title: "PC Club Executive",
-      description: "Effectively managed teams and delegated tasks.",
-      bgImage: "./images/pcClub.png",
     },
     {
       title: "Hackathon Organiser",
