@@ -125,14 +125,11 @@
         </div>
         <div class="flex-1">
             <p class="mb-10 max-w-2xl" id="about-description">
-            <!-- About Description Will Be Injected Here -->
             </p>
-            <ul id="about-cards" class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
-            <!-- About Cards Will Be Injected Here -->
+            <ul id="about-cards" class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">           
             </ul>
             <h4 class="my-6 text-gray-700 dark:text-white/80">Tools I use:</h4>
             <ul id="tools-list" class="flex items-center gap-3 sm:gap-5">
-            <!-- Tools Will Be Injected Here -->
             </ul>
         </div>
         </div>
@@ -157,7 +154,6 @@
         my skills in full-stack development and problem-solving.
     </p>
     <div class="grid grid-cols-auto my-10 gap-5 dark:text-black" id="projectsContainer">
-        <!-- Projects will be dynamically injected here -->
     </div>
     </div>
 
@@ -219,62 +215,50 @@
         <div id="servicesContainer" class="grid grid-cols-auto gap-6 my-10"></div>
     </div>
 
-
-
-      <!-- Contact -->
-      <div id="contact" class="w-full px-[12%] py-10  scroll-mt-20 bg-[url('./images/footer-bg-color.png')]
-      bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+    <!-- Contact -->
+    <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
         <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
         <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
         <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-            I'd love to hear from you! If you have any questions, 
-            comments or feedback, please use the form below.
+            I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.
         </p>
-
+        
         <form action="https://api.web3forms.com/submit" method="post" class="max-w-2xl mx-auto">
             <input type="hidden" name="access_key" value="256264a6-0664-4041-9015-9815f6f64721">
             <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
-                <input type="text" placeholder="Enter your name" name="name" class="flex-1 p-3 outline-none
-                border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required>
-                <input type="text" placeholder="Enter your email" name="email" class="flex-1 p-3 outline-none
-                border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required>
+            <input type="text" name="name" placeholder="Enter your name" class="p-3 border rounded-md outline-none dark:bg-darkHover/30 dark:border-white/90" required>
+            <input type="email" name="email" placeholder="Enter your email" class="p-3 border rounded-md outline-none dark:bg-darkHover/30 dark:border-white/90" required>
             </div>
-            <textarea rows="6" placeholder="Enter your message" name="message" class="w-full p-4 outline-none border
-             border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required></textarea>
-
-
-            <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80
-            text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent 
-            dark:border-[0.5px] dark:hover:bg-darkHover ">Submit now
-                <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            <textarea name="message" rows="6" placeholder="Enter your message" class="w-full p-4 border rounded-md outline-none mb-6 dark:bg-darkHover/30 dark:border-white/90" required></textarea>
+            <button class="py-3 px-8 flex items-center gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border dark:hover:bg-darkHover">
+            Submit now <img src="./images/right-arrow-white.png" alt="Arrow" class="w-4">
             </button>
         </form>
-      </div>
+    </div>
+    
 
-
-      <!-- Footer -->
-      <div class="mt-20">
+    <!-- Footer -->
+    <div class="mt-20">
         <div class="text-center">
-            <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
-            <img src="./images/logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
-            
+        <img src="./images/logo.png" alt="Logo" class="w-36 mx-auto mb-2 dark:hidden">
+        <img src="./images/logo_dark.png" alt="Logo Dark" class="w-36 mx-auto mb-2 hidden dark:block">
         </div>
-        <div class="text-center sm:flex items-center justify-between border-t border-gray-400
-        mx-[10%] mt-12 py-6">
-            <div class="w-max flex items-center gap-2">
-                <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
-                <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
-                akulavishnuvardhanrdy@gmail.com
-            </div>
-            <ul class="flex items-center gap-10 justify-center mt-4  sm:mt-0">
-                <li><a href="https://www.linkedin.com/in/akulavishnuvardhanreddy/">LinkedIn</a></li>
-                <li><a href="https://github.com/AkulaVishnuVardhanReddy">GitHub</a></li>
-                <li><a href="https://www.instagram.com/vishnu_akula30/">Instagram</a></li>
-            </ul>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <div class="flex items-center gap-2 mx-auto sm:mx-0">
+            <img src="./images/mail_icon.png" alt="Mail Icon" class="w-6 dark:hidden">
+            <img src="./images/mail_icon_dark.png" alt="Mail Icon Dark" class="w-6 hidden dark:block">
+            <span>akulavishnuvardhanrdy@gmail.com</span>
         </div>
-      </div>
+        <ul class="flex items-center gap-10 mt-4 sm:mt-0">
+            <li><a href="https://www.linkedin.com/in/akulavishnuvardhanreddy/">LinkedIn</a></li>
+            <li><a href="https://github.com/AkulaVishnuVardhanReddy">GitHub</a></li>
+            <li><a href="https://www.instagram.com/vishnu_akula30/">Instagram</a></li>
+        </ul>
+        </div>
+    </div>
+  
 
-
+    <!-- Js files -->
     <script src="./navBar.js"></script>
     <script src="./aboutMe.js"></script>
     <script src="./skills.js"></script>
