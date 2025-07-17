@@ -1,9 +1,8 @@
 // About Description
 const aboutDescription = `
-  I’m Vishnu Vardhan, a full-stack developer passionate about creating scalable and 
-  responsive web applications. I specialize in both frontend and backend development, 
-  strong understanding in Java Core concepts and DSA problem solving. I’m always eager to learn and explore 
-  new technologies, striving to deliver efficient and impactful solutions.
+  I'm Vishnu Vardhan, a Full Stack Developer passionate about building scalable and responsive web applications. 
+  I work with both the MERN stack and Spring Boot, with a strong foundation in Java Core and DSA. I love solving 
+  real-world problems through clean code and efficient solutions, and I’m always eager to learn and grow as a developer.
 `;
 
 // About Cards Data
@@ -21,17 +20,17 @@ const aboutCardsData = [
   {
     imgSrc: "./images/git.png",
     title: "Collaboration",
-    description: "Using Git for version control and seamless team collaboration.",
+    description: "Using Git & GitHub for version control and team collaboration.",
   },
 ];
 
 // Tools Data
 const toolsData = [
   { imgSrc: "./images/vscode.png", alt: "VSCode Logo" },
-  { imgSrc: "./images/react-logo.png", alt: "React Logo" },
-  { imgSrc: "./images/js-logo.png", alt: "JavaScript Logo" },
-  { imgSrc: "./images/spring.png", alt: "Spring Boot Logo" },
-  { imgSrc: "./images/mongodb.png", alt: "MongoDB Logo" },
+  { imgSrc: "./images/postman.png", alt: "React Logo" },
+  { imgSrc: "./images/intellij.png", alt: "JavaScript Logo" },
+  { imgSrc: "./images/aws.png", alt: "Spring Boot Logo" },
+  { imgSrc: "./images/github.png", alt: "MongoDB Logo" },
   { imgSrc: "./images/git.png", alt: "Git Logo" },
 ];
 

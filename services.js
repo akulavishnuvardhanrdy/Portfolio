@@ -1,5 +1,10 @@
 const services = [
     {
+      title: "Hackathon Winner",
+      description: "Secure 2nd place in intercollagiate hackathon win prize money ₹ 8000",
+      bgImage: "./images/price.jpg",
+    },
+    {
       title: "PC Club Executive",
       description: "Effectively managed teams and delegated tasks.",
       bgImage: "./images/pcClub.jpg",

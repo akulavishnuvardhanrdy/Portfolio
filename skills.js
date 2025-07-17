@@ -8,7 +8,7 @@ const skillsData = [
     {
       imgSrc: "./images/springboot-logo.png",
       title: "Back End",
-      description: "Node.js (MERN) <br> Spring Boot (Java)",
+      description: "Node.js, Express.js <br> Spring Boot",
     },
     {
       imgSrc: "./images/database-logo.png",
@@ -18,7 +18,7 @@ const skillsData = [
     {
       imgSrc: "./images/postman-logo.png",
       title: "Development Tools",
-      description: "Postman, REST APIs <br> Git, Github",
+      description: "Postman, AWS, VS Code, REST APIs, Git, Github",
     },
 ];
 
@@ -28,7 +28,7 @@ const educationData = [
     imgSrc: "./images/rgukt_logo.png",
     title: "B.Tech in Computer Science",
     description:
-    "I am studying B.Tech in CSE at RGUKT RK Valley, expected to graduate in 2026.<br><br>CGPA: 9.14",
+    "I am studying B.Tech in CSE at RGUKT RK Valley, expected to graduate in 2026.<br><br>CGPA: 9.2",
 },
 {
     imgSrc: "./images/rgukt_logo.png",
