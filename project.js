@@ -6,11 +6,11 @@ const projectData = {
       title: "PACER",
       description: "PACER is a Judiciary Information System that improves case management and accessibility for lawyers, judges, and registrars.",
       technologies: [
-        "./images/js-logo.png",
-        "./images/react-logo.png",
-        "./images/spring.png",
-        "./images/tailwind.png",
-        "./images/git.png",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        ".https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://img.icons8.com/?size=100&id=A3Ulk2RcONKs&format=png&color=000000",
+        "https://static.cdnlogo.com/logos/t/58/tailwind-css.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
       ],
       keyFeatures: [
         "Manage court case details and status updates.",
@@ -31,11 +31,11 @@ const projectData = {
       title: "VSR Booking",
       description: "The VSR Booking System allows users to book buses, trains, airplanes, and hotels, providing a seamless experience for travelers.",
       technologies: [
-        "./images/js-logo.png",
-        "./images/react-logo.png",
-        "./images/bootstrap.png",
-        "./images/git.png",
-        "./images/mongodb.png",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        ".https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       ],
       keyFeatures: [
         "Book buses, trains, airplanes, and hotels in one platform.",
@@ -55,8 +55,8 @@ const projectData = {
       title: "Hotel Taj",
       description: "Hotel Taj website is a static, responsive project, offering an attractive and user-friendly interface.",
       technologies: [
-        "./images/html-logo.png",
-        "./images/css-logo.png",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       ],
       keyFeatures: [
           "Fully responsive design for seamless viewing across all devices.",
@@ -76,8 +76,8 @@ const projectData = {
       title: "Election Results",
       description: "The Election Results project is a web application that displays election results with an interactive table",
       technologies: [
-        "./images/html-logo.png",
-        "./images/css-logo.png"
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
       ],
       keyFeatures: [
           "Interactive table displaying election results.",
