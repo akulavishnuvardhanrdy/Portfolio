@@ -1,26 +1,63 @@
 // Data for skills
 const skillsData = [
-    {
-      imgSrc: "./images/frontend-logo.png",
-      title: "Front End",
-      description: "HTML, CSS, JavaScript, React, Bootstrap, Tailwind CSS",
-    },
-    {
-      imgSrc: "./images/springboot-logo.png",
-      title: "Back End",
-      description: "Node.js, Express.js <br> Spring Boot",
-    },
-    {
-      imgSrc: "./images/database-logo.png",
-      title: "Databases",
-      description: "Relational: MySQL<br> NoSQL: MongoDB",
-    },
-    {
-      imgSrc: "./images/postman-logo.png",
-      title: "Development Tools",
-      description: "Postman, AWS, VS Code, REST APIs, Git, Github",
-    },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    name: "HTML"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    name: "JavaScript"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    name: "ReactJS"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    name: "Bootstrap"
+  },
+  {
+    imgSrc: "https://static.cdnlogo.com/logos/t/58/tailwind-css.svg",
+    name: "Tailwind"
+  },
+  {
+    imgSrc: "https://img.icons8.com/?size=100&id=A3Ulk2RcONKs&format=png&color=000000",
+    name: "Spring Boot"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    name: "Node.js"
+  },
+  {
+    imgSrc: "https://img.icons8.com/nolan/64/express-js.png",
+    name: "Express.js"
+  },
+  {
+    imgSrc: "./images/aws.png",
+    name: "AWS"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    name: "MySQL"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    name: "MongoDB"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    name: "Java"
+  },
+  {
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    name: "Git"
+  },
+  {
+    imgSrc: "./images/github.png",
+    name: "GitHub"
+  }
 ];
+
 
 // Data for education
 const educationData = [
@@ -57,9 +94,20 @@ return `
 `;
 }
 
+function createSkill({ imgSrc, name }) {
+return `
+    <div class="flex flex-col flex-wrap justify-center items-center border border-gray-400 rounded-lg w-32 px-3 py-3 hover:shadow-black 
+    cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
+    dark:hover:bg-darkHover dark:hover:shadow-white">
+      <img src="${imgSrc}" alt="" class="w-14 rounded-xl">
+      <h3 class="text-md my-1 text-gray-700 dark:text-white">${name}</h3>
+    </div>
+`;
+}
+
 
 const skillsContainer = document.getElementById("skills-container");
-skillsContainer.innerHTML = skillsData.map(createCard).join("");
+skillsContainer.innerHTML = skillsData.map(createSkill).join("");
 
 
 const educationContainer = document.getElementById("education-container");

@@ -8,7 +8,7 @@ const aboutDescription = `
 // About Cards Data
 const aboutCardsData = [
   {
-    imgSrc: "./images/java_logo.png",
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     title: "Language",
     description: "Expert in Java core concepts and proficient in solving DSA",
   },
@@ -18,7 +18,7 @@ const aboutCardsData = [
     description: "Skilled in Web Development with MERN and Spring Boot.",
   },
   {
-    imgSrc: "./images/git.png",
+    imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     title: "Collaboration",
     description: "Using Git & GitHub for version control and team collaboration.",
   },
@@ -26,12 +26,12 @@ const aboutCardsData = [
 
 // Tools Data
 const toolsData = [
-  { imgSrc: "./images/vscode.png", alt: "VSCode Logo" },
-  { imgSrc: "./images/postman.png", alt: "React Logo" },
-  { imgSrc: "./images/intellij.png", alt: "JavaScript Logo" },
+  { imgSrc: "https://img.icons8.com/color/48/visual-studio-code-2019.png", alt: "VSCode" },
+  { imgSrc: "https://static.cdnlogo.com/logos/p/20/postman.svg", alt: "Postman" },
+  { imgSrc: "https://static.cdnlogo.com/logos/i/41/intellij-idea.svg", alt: "Intellij" },
   { imgSrc: "./images/aws.png", alt: "Spring Boot Logo" },
   { imgSrc: "./images/github.png", alt: "MongoDB Logo" },
-  { imgSrc: "./images/git.png", alt: "Git Logo" },
+  { imgSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git Logo" },
 ];
 
 // Populate About Description
