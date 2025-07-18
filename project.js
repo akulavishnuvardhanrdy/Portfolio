@@ -7,7 +7,7 @@ const projectData = {
       description: "PACER is a Judiciary Information System that improves case management and accessibility for lawyers, judges, and registrars.",
       technologies: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        ".https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         "https://img.icons8.com/?size=100&id=A3Ulk2RcONKs&format=png&color=000000",
         "https://static.cdnlogo.com/logos/t/58/tailwind-css.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
@@ -32,7 +32,7 @@ const projectData = {
       description: "The VSR Booking System allows users to book buses, trains, airplanes, and hotels, providing a seamless experience for travelers.",
       technologies: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        ".https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
